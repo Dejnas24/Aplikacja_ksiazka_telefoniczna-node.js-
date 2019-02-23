@@ -1,0 +1,44 @@
+﻿extend layout
+
+block content
+    h1 Książka telefoniczna:
+    h2 Nowy kontakt
+    form(method="POST", action='/nowy_kontakt')
+        p Numer telefonu:
+        input#title(type="text", name="telefon")
+        p Imię:
+        input#title(type="text",name="imie")
+        p Nazwisko:
+        input#title(type="text", name="nazwisko")
+        p Adress:
+        input#title(type="text", name="adress")
+        p Kod pocztowy:
+        input#title(type="text", name="kodPocztowy")
+        p Miejscowość:
+        input#title(type="text", name="miejscowosc")
+        p Adress Email:
+        input#title(type="text", name="adresEmail")
+        p: button(type="submit") Dodaj nowy kontakt
+        
+
+
+    h2 Utwórz nową bazę danych
+    form(method="POST", action='/utworz_baze')
+        p Nazwa bazy danych:
+        input#title(type="text", name="dbname")
+        p: button(type="submit") Utwórz bazę danych
+
+    h2 Wprowadź numer telefonu do usunięcia
+    form(method="POST", action='/usun_kontakt')
+        p Numer telefonu:
+        input#title(type="text", name="telefon")
+        p: button(type="submit") Usuń kontakt
+
+    h2 Wyświetl kontakt po id nr. telefonu
+    form(method="POST", action='/wyswietl_kontakt')
+        p Numer telefonu:
+        input#title(type="text", name="telefon")
+        p: button(type="submit") Wyświetl kontakt
+
+
+
